@@ -33,20 +33,31 @@
     //    self.mapView.showTraffic = YES;
     
     [self.view insertSubview:self.mapView atIndex:0];
-
     
-    __weak typeof(self) weakSelf = self;
+    self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
+    self.mapView.userLocation.title = @"您的位置在这里";
     
-    [DYLocationManager sharedManager].updateHandler = ^(CLLocation *location) {
-        
-        if (location) {
-            
-            [weakSelf.mapView setCenterCoordinate:location.coordinate animated:YES];
-        }
-        
-    };
+    MAUserLocationRepresentation *represent = [[MAUserLocationRepresentation alloc] init];
+    represent.showsAccuracyRing = YES;
+    represent.showsHeadingIndicator = YES;
+    represent.fillColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:.3];
+    represent.strokeColor = [UIColor lightGrayColor];;
+    represent.lineWidth = 2.f;
+    represent.image = [UIImage imageNamed:@"userPosition"];
+    [self.mapView updateUserLocationRepresentation:represent];
     
-    [[DYLocationManager sharedManager] startSerialLocation];
+//    __weak typeof(self) weakSelf = self;
+//    
+//    [DYLocationManager sharedManager].updateHandler = ^(CLLocation *location) {
+//        
+//        if (location) {
+//            
+//            [weakSelf.mapView setCenterCoordinate:location.coordinate animated:YES];
+//        }
+//        
+//    };
+//    
+//    [[DYLocationManager sharedManager] startSerialLocation];
     
     
 }
