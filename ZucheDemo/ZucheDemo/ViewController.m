@@ -37,27 +37,29 @@
     self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
     self.mapView.userLocation.title = @"您的位置在这里";
     
-    MAUserLocationRepresentation *represent = [[MAUserLocationRepresentation alloc] init];
-    represent.showsAccuracyRing = YES;
-    represent.showsHeadingIndicator = YES;
-    represent.fillColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:.3];
-    represent.strokeColor = [UIColor lightGrayColor];;
-    represent.lineWidth = 2.f;
-    represent.image = [UIImage imageNamed:@"userPosition"];
-    [self.mapView updateUserLocationRepresentation:represent];
+//    MAUserLocationRepresentation *represent = [[MAUserLocationRepresentation alloc] init];
+//    represent.showsAccuracyRing = YES;
+//    represent.showsHeadingIndicator = YES;
+//    represent.fillColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:.3];
+//    represent.strokeColor = [UIColor lightGrayColor];;
+//    represent.lineWidth = 2.f;
+//    represent.image = [UIImage imageNamed:@"userPosition"];
+//    [self.mapView updateUserLocationRepresentation:represent];
     
-//    __weak typeof(self) weakSelf = self;
-//    
-//    [DYLocationManager sharedManager].updateHandler = ^(CLLocation *location) {
-//        
-//        if (location) {
-//            
-//            [weakSelf.mapView setCenterCoordinate:location.coordinate animated:YES];
-//        }
-//        
-//    };
-//    
-//    [[DYLocationManager sharedManager] startSerialLocation];
+    //[self.mapView setCenterCoordinate:self.mapView.userLocation.coordinate animated:YES];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [DYLocationManager sharedManager].updateHandler = ^(CLLocation *location) {
+        
+        if (location) {
+            
+            [weakSelf.mapView setCenterCoordinate:location.coordinate animated:YES];
+        }
+        
+    };
+    
+    [[DYLocationManager sharedManager] startSerialLocation];
     
     
 }
@@ -65,7 +67,8 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.mapView.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
+    CGFloat y = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    self.mapView.frame = CGRectMake(0, y, SCREEN_WIDTH, SCREEN_HEIGHT - y);
     
 }
 
@@ -77,6 +80,15 @@
     annocation.subtitle = @"sljdfklkdfjklfakdf";
     [self.mapView addAnnotation:annocation];
     
+}
+
+- (IBAction)lockAnnotation {
+
+    MAPointAnnotation *annocation = [[MAPointAnnotation alloc] init];
+    [annocation setLockedScreenPoint:CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)];
+    [annocation setLockedToScreen:YES];
+    [self.mapView addAnnotation:annocation];
+
 }
 
 /**
@@ -123,6 +135,11 @@
     }
     
     return nil;
+}
+
+- (void)dealloc {
+
+    NSLog(@"%s", __FUNCTION__);
 }
 
 @end
