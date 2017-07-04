@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DYLocationManager.h"
+#import "DYPOISearchViewController.h"
 
 @interface ViewController () <MAMapViewDelegate>
 
@@ -135,6 +136,14 @@
     }
     
     return nil;
+}
+
+- (IBAction)poiViewController {
+
+    DYPOISearchViewController *poiVC = [DYPOISearchViewController new];
+    
+    [self.navigationController pushViewController:poiVC animated:YES];
+
 }
 
 - (void)dealloc {

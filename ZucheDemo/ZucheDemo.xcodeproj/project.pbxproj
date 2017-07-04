@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049193511F0B31BC00DCD7F2 /* DYPOISearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193501F0B31BC00DCD7F2 /* DYPOISearchViewController.m */; };
+		049193631F0B6D1D00DCD7F2 /* CommonUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193541F0B6D1D00DCD7F2 /* CommonUtility.m */; };
+		049193641F0B6D1D00DCD7F2 /* ErrorInfoUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193561F0B6D1D00DCD7F2 /* ErrorInfoUtility.m */; };
+		049193651F0B6D1D00DCD7F2 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193591F0B6D1D00DCD7F2 /* ALView+PureLayout.m */; };
+		049193661F0B6D1D00DCD7F2 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491935B1F0B6D1D00DCD7F2 /* NSArray+PureLayout.m */; };
+		049193671F0B6D1D00DCD7F2 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491935D1F0B6D1D00DCD7F2 /* NSLayoutConstraint+PureLayout.m */; };
+		049193681F0B6D1D00DCD7F2 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193621F0B6D1D00DCD7F2 /* UIView+Toast.m */; };
+		0491936B1F0B79D700DCD7F2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491936A1F0B79D700DCD7F2 /* MBProgressHUD.m */; };
 		04BE6FB51F09E481006F5ADA /* DYFenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE6FB41F09E481006F5ADA /* DYFenceViewController.m */; };
 		04BE6FB81F09EED1006F5ADA /* DYLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE6FB71F09EED1006F5ADA /* DYLocationManager.m */; };
 		04F816261F09C9D700D43A7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F816251F09C9D700D43A7C /* main.m */; };
@@ -39,6 +47,25 @@
 
 /* Begin PBXFileReference section */
 		045DDA851F09CED900F62FB6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0491934F1F0B31BC00DCD7F2 /* DYPOISearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYPOISearchViewController.h; sourceTree = "<group>"; };
+		049193501F0B31BC00DCD7F2 /* DYPOISearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYPOISearchViewController.m; sourceTree = "<group>"; };
+		049193531F0B6D1D00DCD7F2 /* CommonUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtility.h; sourceTree = "<group>"; };
+		049193541F0B6D1D00DCD7F2 /* CommonUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtility.m; sourceTree = "<group>"; };
+		049193551F0B6D1D00DCD7F2 /* ErrorInfoUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorInfoUtility.h; sourceTree = "<group>"; };
+		049193561F0B6D1D00DCD7F2 /* ErrorInfoUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorInfoUtility.m; sourceTree = "<group>"; };
+		049193581F0B6D1D00DCD7F2 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		049193591F0B6D1D00DCD7F2 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		0491935A1F0B6D1D00DCD7F2 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		0491935B1F0B6D1D00DCD7F2 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		0491935C1F0B6D1D00DCD7F2 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		0491935D1F0B6D1D00DCD7F2 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		0491935E1F0B6D1D00DCD7F2 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		0491935F1F0B6D1D00DCD7F2 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		049193601F0B6D1D00DCD7F2 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		049193611F0B6D1D00DCD7F2 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		049193621F0B6D1D00DCD7F2 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		049193691F0B79D700DCD7F2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		0491936A1F0B79D700DCD7F2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		04BE6FB31F09E481006F5ADA /* DYFenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFenceViewController.h; sourceTree = "<group>"; };
 		04BE6FB41F09E481006F5ADA /* DYFenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFenceViewController.m; sourceTree = "<group>"; };
 		04BE6FB61F09EED1006F5ADA /* DYLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYLocationManager.h; sourceTree = "<group>"; };
@@ -90,6 +117,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049193521F0B6D1D00DCD7F2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				049193691F0B79D700DCD7F2 /* MBProgressHUD.h */,
+				0491936A1F0B79D700DCD7F2 /* MBProgressHUD.m */,
+				049193531F0B6D1D00DCD7F2 /* CommonUtility.h */,
+				049193541F0B6D1D00DCD7F2 /* CommonUtility.m */,
+				049193551F0B6D1D00DCD7F2 /* ErrorInfoUtility.h */,
+				049193561F0B6D1D00DCD7F2 /* ErrorInfoUtility.m */,
+				049193571F0B6D1D00DCD7F2 /* PureLayout */,
+				049193611F0B6D1D00DCD7F2 /* UIView+Toast.h */,
+				049193621F0B6D1D00DCD7F2 /* UIView+Toast.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		049193571F0B6D1D00DCD7F2 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				049193581F0B6D1D00DCD7F2 /* ALView+PureLayout.h */,
+				049193591F0B6D1D00DCD7F2 /* ALView+PureLayout.m */,
+				0491935A1F0B6D1D00DCD7F2 /* NSArray+PureLayout.h */,
+				0491935B1F0B6D1D00DCD7F2 /* NSArray+PureLayout.m */,
+				0491935C1F0B6D1D00DCD7F2 /* NSLayoutConstraint+PureLayout.h */,
+				0491935D1F0B6D1D00DCD7F2 /* NSLayoutConstraint+PureLayout.m */,
+				0491935E1F0B6D1D00DCD7F2 /* PureLayout+Internal.h */,
+				0491935F1F0B6D1D00DCD7F2 /* PureLayout.h */,
+				049193601F0B6D1D00DCD7F2 /* PureLayoutDefines.h */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
 		04F816181F09C9D600D43A7C = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +188,9 @@
 				04BE6FB41F09E481006F5ADA /* DYFenceViewController.m */,
 				04BE6FB61F09EED1006F5ADA /* DYLocationManager.h */,
 				04BE6FB71F09EED1006F5ADA /* DYLocationManager.m */,
+				0491934F1F0B31BC00DCD7F2 /* DYPOISearchViewController.h */,
+				049193501F0B31BC00DCD7F2 /* DYPOISearchViewController.m */,
+				049193521F0B6D1D00DCD7F2 /* Utility */,
 			);
 			path = ZucheDemo;
 			sourceTree = "<group>";
@@ -368,11 +430,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049193681F0B6D1D00DCD7F2 /* UIView+Toast.m in Sources */,
 				04F8162C1F09C9D700D43A7C /* ViewController.m in Sources */,
 				04F816291F09C9D700D43A7C /* AppDelegate.m in Sources */,
+				049193511F0B31BC00DCD7F2 /* DYPOISearchViewController.m in Sources */,
 				04F816261F09C9D700D43A7C /* main.m in Sources */,
+				049193671F0B6D1D00DCD7F2 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				049193661F0B6D1D00DCD7F2 /* NSArray+PureLayout.m in Sources */,
+				049193651F0B6D1D00DCD7F2 /* ALView+PureLayout.m in Sources */,
 				04BE6FB81F09EED1006F5ADA /* DYLocationManager.m in Sources */,
+				0491936B1F0B79D700DCD7F2 /* MBProgressHUD.m in Sources */,
 				04BE6FB51F09E481006F5ADA /* DYFenceViewController.m in Sources */,
+				049193631F0B6D1D00DCD7F2 /* CommonUtility.m in Sources */,
+				049193641F0B6D1D00DCD7F2 /* ErrorInfoUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
