@@ -92,7 +92,11 @@
         return;
     }
     //关键字搜索周边的点
-    [self searchPOIWithKeyword:searchBar.text];
+    //[self searchPOIWithKeyword:searchBar.text];
+    //检索附近的点
+    //[self searchPOIAroundWithKeywords:searchBar.text];
+    //检索指点范围内的点
+    [self searchPOIPolygonWithKeywords:searchBar.text];
 }
 
 - (void)searchPOIWithKeyword:(NSString *)keyword {
@@ -101,8 +105,42 @@
 
     request.keywords = keyword;
     request.requireSubPOIs = YES;
+    request.cityLimit = YES;
+    request.city = @"深圳";
     
     [self.search AMapPOIKeywordsSearch:request];
+    
+}
+
+- (void)searchPOIAroundWithKeywords:(NSString *)keywords {
+
+    AMapPOIAroundSearchRequest *request = [[AMapPOIAroundSearchRequest alloc] init];
+    request.location = [AMapGeoPoint locationWithLatitude:self.mapView.userLocation.coordinate.latitude longitude:self.mapView.userLocation.coordinate.longitude] ;
+    request.keywords = keywords;
+    request.sortrule = 0;
+    request.types = @"酒店";//@"车站|酒店|电影院"
+    request.requireExtension = YES;
+    [self.search AMapPOIAroundSearch:request];
+
+}
+
+- (void)searchPOIPolygonWithKeywords:(NSString *)keywords {
+
+    CLLocationCoordinate2D coordinate = self.mapView.userLocation.coordinate;
+    NSArray *points = @[
+                        [AMapGeoPoint locationWithLatitude:coordinate.latitude - 0.05 longitude:coordinate.longitude - 0.05],
+                        [AMapGeoPoint locationWithLatitude:coordinate.latitude + 0.05 longitude:coordinate.longitude + 0.05]
+                        ];
+    
+    AMapGeoPolygon *polygon = [AMapGeoPolygon polygonWithPoints:points];
+    
+    AMapPOIPolygonSearchRequest *request = [[AMapPOIPolygonSearchRequest alloc] init];
+    
+    request.polygon = polygon;
+    request.keywords = keywords;
+    request.requireExtension = YES;
+    
+    [self.search AMapPOIPolygonSearch:request];
     
 }
 
