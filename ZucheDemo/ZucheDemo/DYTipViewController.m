@@ -64,8 +64,6 @@
     [self.view insertSubview:self.mapView atIndex:0];
     self.mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
-    
-    
     self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
     self.mapView.userLocation.title = @"您的位置在这里";
     
@@ -191,6 +189,27 @@
     [self.mapView addAnnotation:tipAnnotation];
     
     [self.mapView showAnnotations:@[tipAnnotation] animated:YES];
+
+}
+
+- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation {
+
+    if ([annotation isKindOfClass:[DYTipAnnotation class]]) {
+        
+        
+        static NSString *tipViewId = @"tipViewId";
+        MAPinAnnotationView *tipView = (MAPinAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:tipViewId];
+        if (tipView == nil) {
+            tipView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:tipViewId];
+        }
+        
+        tipView.canShowCallout = YES;
+        
+        return tipView;
+        
+    }
+    
+    return nil;
 
 }
 

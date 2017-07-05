@@ -171,7 +171,6 @@
 			children = (
 				0491934F1F0B31BC00DCD7F2 /* DYPOISearchViewController.h */,
 				049193501F0B31BC00DCD7F2 /* DYPOISearchViewController.m */,
-				049193721F0C920700DCD7F2 /* Tip */,
 			);
 			name = POI;
 			sourceTree = "<group>";
@@ -231,6 +230,7 @@
 				045DDA851F09CED900F62FB6 /* PrefixHeader.pch */,
 				049193741F0C922100DCD7F2 /* Fence */,
 				049193751F0C922D00DCD7F2 /* Location */,
+				049193721F0C920700DCD7F2 /* Tip */,
 				049193731F0C921400DCD7F2 /* POI */,
 				049193521F0B6D1D00DCD7F2 /* Utility */,
 			);
