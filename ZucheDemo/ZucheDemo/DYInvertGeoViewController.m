@@ -7,6 +7,7 @@
 //
 
 #import "DYInvertGeoViewController.h"
+#import "DYReGeoDetailViewController.h"
 
 @interface DYInvertGeoViewController () <MAMapViewDelegate,AMapSearchDelegate>
 
@@ -21,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self initMap];
     
@@ -82,7 +85,9 @@
         pinView.animatesDrop = YES;
         pinView.pinColor = MAPinAnnotationColorPurple;
         
-        pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        pinView.rightCalloutAccessoryView = button;
+        [button addTarget:self action:@selector(goToDetailViewController) forControlEvents:UIControlEventTouchUpInside];
         
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hema"]];
         imageView.frame = CGRectMake(0, 0, 50, 50);
@@ -94,6 +99,14 @@
     }
     
     return nil;
+
+}
+
+- (void)goToDetailViewController {
+
+    DYReGeoDetailViewController *regeoVC = [DYReGeoDetailViewController new];
+    
+    [self.navigationController pushViewController:regeoVC animated:YES];
 
 }
 
