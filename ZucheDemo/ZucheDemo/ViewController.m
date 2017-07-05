@@ -10,6 +10,8 @@
 #import "DYLocationManager.h"
 #import "DYPOISearchViewController.h"
 #import "DYTipViewController.h"
+#import "DYGeoViewController.h"
+#import "DYInvertGeoViewController.h"
 
 @interface ViewController () <MAMapViewDelegate>
 
@@ -157,6 +159,22 @@
     DYTipViewController *tipVC = [[DYTipViewController alloc] init];
     
     [self.navigationController pushViewController:tipVC animated:YES];
+    
+}
+
+- (IBAction)geoViewController:(id)sender {
+
+    DYGeoViewController *geoVC = [[DYGeoViewController alloc] init];
+    
+    [self.navigationController pushViewController:geoVC animated:YES];
+
+}
+
+- (IBAction)invertGeoViewController:(id)sender {
+
+    DYInvertGeoViewController *invertGeoVC = [[DYInvertGeoViewController alloc] init];
+    
+    [self.navigationController pushViewController:invertGeoVC animated:YES];
     
 }
 

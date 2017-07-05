@@ -53,20 +53,36 @@
                                     <action selector="tipViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5X-nq-ERy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJB-pg-te8">
+                                <rect key="frame" x="51" y="237" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="geo"/>
+                                <connections>
+                                    <action selector="geoViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="msc-hc-CIl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1io-c9-MoL">
+                                <rect key="frame" x="32" y="275" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="InvertGeo"/>
+                                <connections>
+                                    <action selector="invertGeoViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iGP-ep-dCr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main" id="gD3-CP-vRa">
                         <barButtonItem key="rightBarButtonItem" title="Fence" id="hGW-YB-oMS">
                             <connections>
-                                <segue destination="XEj-lU-Uou" kind="push" id="NQ6-Vp-V29"/>
+                                <segue destination="XEj-lU-Uou" kind="show" id="MCq-Ev-41X"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+            <point key="canvasLocation" x="624.79999999999995" y="-545.57721139430294"/>
         </scene>
         <!--fence-->
         <scene sceneID="xKg-ME-T1F">
@@ -85,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOG-7C-faa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="139"/>
+            <point key="canvasLocation" x="1359" y="-546"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BHz-3d-61E">
@@ -103,7 +119,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZf-nM-ZbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="-543.77811094452773"/>
+            <point key="canvasLocation" x="-79" y="-546"/>
         </scene>
     </scenes>
 </document>

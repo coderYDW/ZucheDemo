@@ -17,6 +17,8 @@
 		0491936B1F0B79D700DCD7F2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491936A1F0B79D700DCD7F2 /* MBProgressHUD.m */; };
 		0491936E1F0C781200DCD7F2 /* DYTipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491936D1F0C781200DCD7F2 /* DYTipViewController.m */; };
 		049193711F0C8E9D00DCD7F2 /* DYTipAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193701F0C8E9D00DCD7F2 /* DYTipAnnotation.m */; };
+		049193791F0C982900DCD7F2 /* DYGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193781F0C982900DCD7F2 /* DYGeoViewController.m */; };
+		0491937C1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491937B1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m */; };
 		04BE6FB51F09E481006F5ADA /* DYFenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE6FB41F09E481006F5ADA /* DYFenceViewController.m */; };
 		04BE6FB81F09EED1006F5ADA /* DYLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE6FB71F09EED1006F5ADA /* DYLocationManager.m */; };
 		04F816261F09C9D700D43A7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F816251F09C9D700D43A7C /* main.m */; };
@@ -72,6 +74,10 @@
 		0491936D1F0C781200DCD7F2 /* DYTipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYTipViewController.m; sourceTree = "<group>"; };
 		0491936F1F0C8E9D00DCD7F2 /* DYTipAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYTipAnnotation.h; sourceTree = "<group>"; };
 		049193701F0C8E9D00DCD7F2 /* DYTipAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYTipAnnotation.m; sourceTree = "<group>"; };
+		049193771F0C982900DCD7F2 /* DYGeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYGeoViewController.h; sourceTree = "<group>"; };
+		049193781F0C982900DCD7F2 /* DYGeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYGeoViewController.m; sourceTree = "<group>"; };
+		0491937A1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYInvertGeoViewController.h; sourceTree = "<group>"; };
+		0491937B1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYInvertGeoViewController.m; sourceTree = "<group>"; };
 		04BE6FB31F09E481006F5ADA /* DYFenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFenceViewController.h; sourceTree = "<group>"; };
 		04BE6FB41F09E481006F5ADA /* DYFenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFenceViewController.m; sourceTree = "<group>"; };
 		04BE6FB61F09EED1006F5ADA /* DYLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYLocationManager.h; sourceTree = "<group>"; };
@@ -193,6 +199,17 @@
 			name = Location;
 			sourceTree = "<group>";
 		};
+		049193761F0C980600DCD7F2 /* Geo */ = {
+			isa = PBXGroup;
+			children = (
+				049193771F0C982900DCD7F2 /* DYGeoViewController.h */,
+				049193781F0C982900DCD7F2 /* DYGeoViewController.m */,
+				0491937A1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.h */,
+				0491937B1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m */,
+			);
+			name = Geo;
+			sourceTree = "<group>";
+		};
 		04F816181F09C9D600D43A7C = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +245,7 @@
 				04F816351F09C9D700D43A7C /* Info.plist */,
 				04F816241F09C9D700D43A7C /* Supporting Files */,
 				045DDA851F09CED900F62FB6 /* PrefixHeader.pch */,
+				049193761F0C980600DCD7F2 /* Geo */,
 				049193741F0C922100DCD7F2 /* Fence */,
 				049193751F0C922D00DCD7F2 /* Location */,
 				049193721F0C920700DCD7F2 /* Tip */,
@@ -479,10 +497,12 @@
 				04F816261F09C9D700D43A7C /* main.m in Sources */,
 				049193671F0B6D1D00DCD7F2 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				049193661F0B6D1D00DCD7F2 /* NSArray+PureLayout.m in Sources */,
+				049193791F0C982900DCD7F2 /* DYGeoViewController.m in Sources */,
 				049193651F0B6D1D00DCD7F2 /* ALView+PureLayout.m in Sources */,
 				04BE6FB81F09EED1006F5ADA /* DYLocationManager.m in Sources */,
 				0491936B1F0B79D700DCD7F2 /* MBProgressHUD.m in Sources */,
 				049193711F0C8E9D00DCD7F2 /* DYTipAnnotation.m in Sources */,
+				0491937C1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m in Sources */,
 				04BE6FB51F09E481006F5ADA /* DYFenceViewController.m in Sources */,
 				0491936E1F0C781200DCD7F2 /* DYTipViewController.m in Sources */,
 				049193631F0B6D1D00DCD7F2 /* CommonUtility.m in Sources */,
