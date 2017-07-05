@@ -33,6 +33,7 @@
     self.mapView.showsUserLocation = YES;
     self.mapView.showsLabels = YES;
     self.mapView.delegate = self;
+//    self.mapView.userLocation.title = @"你就是";
     
     [self.view insertSubview:self.mapView atIndex:0];
     
@@ -214,6 +215,8 @@
     return nil;
 
 }
+
+
 
 
 @end

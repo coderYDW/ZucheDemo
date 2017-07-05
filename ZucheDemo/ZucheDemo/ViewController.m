@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "DYLocationManager.h"
 #import "DYPOISearchViewController.h"
+#import "DYTipViewController.h"
 
 @interface ViewController () <MAMapViewDelegate>
 
@@ -24,6 +25,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self initMap];
+    
+    [[DYLocationManager sharedManager] startSerialLocation];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [DYLocationManager sharedManager].updateHandler = ^(CLLocation *location) {
+        
+        if (location) {
+            
+            [weakSelf.mapView setCenterCoordinate:location.coordinate animated:YES];
+        }
+        
+    };
+    
+}
+
+- (void)initMap {
+
     self.mapView = [[MAMapView alloc] init];
     self.mapView.delegate = self;
     
@@ -38,31 +58,17 @@
     self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
     self.mapView.userLocation.title = @"您的位置在这里";
     
-//    MAUserLocationRepresentation *represent = [[MAUserLocationRepresentation alloc] init];
-//    represent.showsAccuracyRing = YES;
-//    represent.showsHeadingIndicator = YES;
-//    represent.fillColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:.3];
-//    represent.strokeColor = [UIColor lightGrayColor];;
-//    represent.lineWidth = 2.f;
-//    represent.image = [UIImage imageNamed:@"userPosition"];
-//    [self.mapView updateUserLocationRepresentation:represent];
+    //    MAUserLocationRepresentation *represent = [[MAUserLocationRepresentation alloc] init];
+    //    represent.showsAccuracyRing = YES;
+    //    represent.showsHeadingIndicator = YES;
+    //    represent.fillColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:.3];
+    //    represent.strokeColor = [UIColor lightGrayColor];;
+    //    represent.lineWidth = 2.f;
+    //    represent.image = [UIImage imageNamed:@"userPosition"];
+    //    [self.mapView updateUserLocationRepresentation:represent];
     
     //[self.mapView setCenterCoordinate:self.mapView.userLocation.coordinate animated:YES];
-    
-    __weak typeof(self) weakSelf = self;
-    
-    [DYLocationManager sharedManager].updateHandler = ^(CLLocation *location) {
-        
-        if (location) {
-            
-            [weakSelf.mapView setCenterCoordinate:location.coordinate animated:YES];
-        }
-        
-    };
-    
-    [[DYLocationManager sharedManager] startSerialLocation];
-    
-    
+
 }
 
 - (void)viewDidLayoutSubviews {
@@ -144,6 +150,14 @@
     
     [self.navigationController pushViewController:poiVC animated:YES];
 
+}
+
+- (IBAction)tipViewController:(id)sender {
+
+    DYTipViewController *tipVC = [[DYTipViewController alloc] init];
+    
+    [self.navigationController pushViewController:tipVC animated:YES];
+    
 }
 
 - (void)dealloc {
