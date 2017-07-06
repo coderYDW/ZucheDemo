@@ -31,6 +31,7 @@
 		04F8163F1F09C9D700D43A7C /* ZucheDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F8163E1F09C9D700D43A7C /* ZucheDemoTests.m */; };
 		04F8164A1F09C9D700D43A7C /* ZucheDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F816491F09C9D700D43A7C /* ZucheDemoUITests.m */; };
 		A956BC6EB63EC05B8E89B165 /* libPods-ZucheDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEEFF25675C20D103C0021C /* libPods-ZucheDemo.a */; };
+		E420C90A1F0E112D00D146B9 /* DYRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E420C9091F0E112D00D146B9 /* DYRouteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		3FC52D66966C8E5B6E9DB231 /* Pods-ZucheDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZucheDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZucheDemo/Pods-ZucheDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5CEEFF25675C20D103C0021C /* libPods-ZucheDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZucheDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B073A2567E70681EC1F81685 /* Pods-ZucheDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZucheDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZucheDemo/Pods-ZucheDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E420C9081F0E112D00D146B9 /* DYRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYRouteViewController.h; sourceTree = "<group>"; };
+		E420C9091F0E112D00D146B9 /* DYRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYRouteViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +253,7 @@
 				04F816351F09C9D700D43A7C /* Info.plist */,
 				04F816241F09C9D700D43A7C /* Supporting Files */,
 				045DDA851F09CED900F62FB6 /* PrefixHeader.pch */,
+				E420C9071F0E110900D146B9 /* Route */,
 				049193761F0C980600DCD7F2 /* Geo */,
 				049193741F0C922100DCD7F2 /* Fence */,
 				049193751F0C922D00DCD7F2 /* Location */,
@@ -301,6 +305,15 @@
 				5CEEFF25675C20D103C0021C /* libPods-ZucheDemo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E420C9071F0E110900D146B9 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				E420C9081F0E112D00D146B9 /* DYRouteViewController.h */,
+				E420C9091F0E112D00D146B9 /* DYRouteViewController.m */,
+			);
+			name = Route;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +522,7 @@
 				049193711F0C8E9D00DCD7F2 /* DYTipAnnotation.m in Sources */,
 				0491937C1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m in Sources */,
 				04BE6FB51F09E481006F5ADA /* DYFenceViewController.m in Sources */,
+				E420C90A1F0E112D00D146B9 /* DYRouteViewController.m in Sources */,
 				0491936E1F0C781200DCD7F2 /* DYTipViewController.m in Sources */,
 				049193631F0B6D1D00DCD7F2 /* CommonUtility.m in Sources */,
 				049193641F0B6D1D00DCD7F2 /* ErrorInfoUtility.m in Sources */,

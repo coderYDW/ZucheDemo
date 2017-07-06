@@ -116,7 +116,7 @@
     __weak typeof(self) weakSelf = self;
     DYReGeoDetailViewController *regeoVC = [[DYReGeoDetailViewController alloc] initWithRegeocode:self.regeocode selectedBlock:^(AMapPOI *poi) {
         
-        [weakSelf addAnnotationWithPoi:poi];
+        [weakSelf reGoeWithPoi:poi];
         
     }];
     
@@ -124,7 +124,7 @@
 
 }
 
-- (void)addAnnotationWithPoi:(AMapPOI *)poi {
+- (void)reGoeWithPoi:(AMapPOI *)poi {
 
     //发起逆地理编码
     AMapGeoPoint *point = [AMapGeoPoint locationWithLatitude:poi.location.latitude longitude:poi.location.longitude];

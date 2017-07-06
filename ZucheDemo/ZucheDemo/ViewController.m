@@ -12,6 +12,7 @@
 #import "DYTipViewController.h"
 #import "DYGeoViewController.h"
 #import "DYInvertGeoViewController.h"
+#import "DYRouteViewController.h"
 
 @interface ViewController () <MAMapViewDelegate>
 
@@ -176,6 +177,14 @@
     
     [self.navigationController pushViewController:invertGeoVC animated:YES];
     
+}
+
+- (IBAction)routeViewController:(id)sender {
+
+    DYRouteViewController *routeVC = [[DYRouteViewController alloc] init];
+    
+    [self.navigationController pushViewController:routeVC animated:YES];
+
 }
 
 - (void)dealloc {
