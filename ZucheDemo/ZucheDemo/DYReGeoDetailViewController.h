@@ -10,4 +10,6 @@
 
 @interface DYReGeoDetailViewController : UIViewController
 
+- (instancetype)initWithRegeocode:(AMapReGeocode *)regeocode selectedBlock:(void(^)(AMapPOI *poi))selectedBlock;
+
 @end

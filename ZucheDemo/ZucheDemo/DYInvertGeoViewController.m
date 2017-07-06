@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong) AMapSearchAPI *search;
 
+@property (nonatomic, strong) AMapReGeocode *regeocode;
+
 
 @end
 
@@ -46,10 +48,16 @@
 - (void)mapView:(MAMapView *)mapView didLongPressedAtCoordinate:(CLLocationCoordinate2D)coordinate {
 
     //发起逆地理编码
-    AMapGeoPoint *ponit = [AMapGeoPoint locationWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+    AMapGeoPoint *point = [AMapGeoPoint locationWithLatitude:coordinate.latitude longitude:coordinate.longitude];
     
+    [self reGeoCodeRequestWithPoint:point];
+
+}
+
+- (void)reGeoCodeRequestWithPoint:(AMapGeoPoint *)point {
+
     AMapReGeocodeSearchRequest *reGeoRequest = [AMapReGeocodeSearchRequest new];
-    reGeoRequest.location = ponit;
+    reGeoRequest.location = point;
     reGeoRequest.requireExtension = YES;
     
     [self.search AMapReGoecodeSearch:reGeoRequest];
@@ -59,10 +67,11 @@
 - (void)onReGeocodeSearchDone:(AMapReGeocodeSearchRequest *)request response:(AMapReGeocodeSearchResponse *)response {
 
     if (response.regeocode != nil) {
-        
+        self.regeocode = response.regeocode;
         MAPointAnnotation *anno = [MAPointAnnotation new];
         anno.coordinate = CLLocationCoordinate2DMake(request.location.latitude, request.location.longitude);
         anno.title = response.regeocode.formattedAddress;
+        [self.mapView removeAnnotations:self.mapView.annotations];
         [self.mapView addAnnotation:anno];
         [self.mapView selectAnnotation:anno animated:YES];
         
@@ -104,10 +113,24 @@
 
 - (void)goToDetailViewController {
 
-    DYReGeoDetailViewController *regeoVC = [DYReGeoDetailViewController new];
+    __weak typeof(self) weakSelf = self;
+    DYReGeoDetailViewController *regeoVC = [[DYReGeoDetailViewController alloc] initWithRegeocode:self.regeocode selectedBlock:^(AMapPOI *poi) {
+        
+        [weakSelf addAnnotationWithPoi:poi];
+        
+    }];
     
     [self.navigationController pushViewController:regeoVC animated:YES];
 
+}
+
+- (void)addAnnotationWithPoi:(AMapPOI *)poi {
+
+    //发起逆地理编码
+    AMapGeoPoint *point = [AMapGeoPoint locationWithLatitude:poi.location.latitude longitude:poi.location.longitude];
+    
+    [self reGeoCodeRequestWithPoint:point];
+    
 }
 
 
