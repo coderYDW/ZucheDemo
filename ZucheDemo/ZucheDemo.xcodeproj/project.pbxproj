@@ -20,6 +20,10 @@
 		049193791F0C982900DCD7F2 /* DYGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193781F0C982900DCD7F2 /* DYGeoViewController.m */; };
 		0491937C1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491937B1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m */; };
 		0491937F1F0CF47300DCD7F2 /* DYReGeoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491937E1F0CF47300DCD7F2 /* DYReGeoDetailViewController.m */; };
+		049193891F0E283B00DCD7F2 /* LineDashPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193821F0E283B00DCD7F2 /* LineDashPolyline.m */; };
+		0491938A1F0E283B00DCD7F2 /* MANaviAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193841F0E283B00DCD7F2 /* MANaviAnnotation.m */; };
+		0491938B1F0E283B00DCD7F2 /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193861F0E283B00DCD7F2 /* MANaviPolyline.m */; };
+		0491938C1F0E283B00DCD7F2 /* MANaviRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193881F0E283B00DCD7F2 /* MANaviRoute.m */; };
 		04BE6FB51F09E481006F5ADA /* DYFenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE6FB41F09E481006F5ADA /* DYFenceViewController.m */; };
 		04BE6FB81F09EED1006F5ADA /* DYLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE6FB71F09EED1006F5ADA /* DYLocationManager.m */; };
 		04F816261F09C9D700D43A7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F816251F09C9D700D43A7C /* main.m */; };
@@ -82,6 +86,14 @@
 		0491937B1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYInvertGeoViewController.m; sourceTree = "<group>"; };
 		0491937D1F0CF47300DCD7F2 /* DYReGeoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYReGeoDetailViewController.h; sourceTree = "<group>"; };
 		0491937E1F0CF47300DCD7F2 /* DYReGeoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYReGeoDetailViewController.m; sourceTree = "<group>"; };
+		049193811F0E283B00DCD7F2 /* LineDashPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDashPolyline.h; sourceTree = "<group>"; };
+		049193821F0E283B00DCD7F2 /* LineDashPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDashPolyline.m; sourceTree = "<group>"; };
+		049193831F0E283B00DCD7F2 /* MANaviAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviAnnotation.h; sourceTree = "<group>"; };
+		049193841F0E283B00DCD7F2 /* MANaviAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviAnnotation.m; sourceTree = "<group>"; };
+		049193851F0E283B00DCD7F2 /* MANaviPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviPolyline.h; sourceTree = "<group>"; };
+		049193861F0E283B00DCD7F2 /* MANaviPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviPolyline.m; sourceTree = "<group>"; };
+		049193871F0E283B00DCD7F2 /* MANaviRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviRoute.h; sourceTree = "<group>"; };
+		049193881F0E283B00DCD7F2 /* MANaviRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviRoute.m; sourceTree = "<group>"; };
 		04BE6FB31F09E481006F5ADA /* DYFenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFenceViewController.h; sourceTree = "<group>"; };
 		04BE6FB41F09E481006F5ADA /* DYFenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFenceViewController.m; sourceTree = "<group>"; };
 		04BE6FB61F09EED1006F5ADA /* DYLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYLocationManager.h; sourceTree = "<group>"; };
@@ -218,6 +230,21 @@
 			name = Geo;
 			sourceTree = "<group>";
 		};
+		049193801F0E283B00DCD7F2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				049193811F0E283B00DCD7F2 /* LineDashPolyline.h */,
+				049193821F0E283B00DCD7F2 /* LineDashPolyline.m */,
+				049193831F0E283B00DCD7F2 /* MANaviAnnotation.h */,
+				049193841F0E283B00DCD7F2 /* MANaviAnnotation.m */,
+				049193851F0E283B00DCD7F2 /* MANaviPolyline.h */,
+				049193861F0E283B00DCD7F2 /* MANaviPolyline.m */,
+				049193871F0E283B00DCD7F2 /* MANaviRoute.h */,
+				049193881F0E283B00DCD7F2 /* MANaviRoute.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		04F816181F09C9D600D43A7C = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +337,7 @@
 		E420C9071F0E110900D146B9 /* Route */ = {
 			isa = PBXGroup;
 			children = (
+				049193801F0E283B00DCD7F2 /* model */,
 				E420C9081F0E112D00D146B9 /* DYRouteViewController.h */,
 				E420C9091F0E112D00D146B9 /* DYRouteViewController.m */,
 			);
@@ -514,8 +542,10 @@
 				049193511F0B31BC00DCD7F2 /* DYPOISearchViewController.m in Sources */,
 				04F816261F09C9D700D43A7C /* main.m in Sources */,
 				049193671F0B6D1D00DCD7F2 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				0491938A1F0E283B00DCD7F2 /* MANaviAnnotation.m in Sources */,
 				049193661F0B6D1D00DCD7F2 /* NSArray+PureLayout.m in Sources */,
 				049193791F0C982900DCD7F2 /* DYGeoViewController.m in Sources */,
+				0491938B1F0E283B00DCD7F2 /* MANaviPolyline.m in Sources */,
 				049193651F0B6D1D00DCD7F2 /* ALView+PureLayout.m in Sources */,
 				04BE6FB81F09EED1006F5ADA /* DYLocationManager.m in Sources */,
 				0491936B1F0B79D700DCD7F2 /* MBProgressHUD.m in Sources */,
@@ -523,8 +553,10 @@
 				0491937C1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m in Sources */,
 				04BE6FB51F09E481006F5ADA /* DYFenceViewController.m in Sources */,
 				E420C90A1F0E112D00D146B9 /* DYRouteViewController.m in Sources */,
+				0491938C1F0E283B00DCD7F2 /* MANaviRoute.m in Sources */,
 				0491936E1F0C781200DCD7F2 /* DYTipViewController.m in Sources */,
 				049193631F0B6D1D00DCD7F2 /* CommonUtility.m in Sources */,
+				049193891F0E283B00DCD7F2 /* LineDashPolyline.m in Sources */,
 				049193641F0B6D1D00DCD7F2 /* ErrorInfoUtility.m in Sources */,
 				0491937F1F0CF47300DCD7F2 /* DYReGeoDetailViewController.m in Sources */,
 			);
