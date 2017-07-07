@@ -12,10 +12,7 @@
 //114.124223,22.535561  深圳站
 //114.036937,22.616579  深圳北站
 //114.110985,22.567428  红岭北
-#define WZKGDA CLLocationCoordinate2DMake(22.563855, 114.11351)
-#define SZBZ   CLLocationCoordinate2DMake(22.616579, 114.036937)
-#define SZZ   CLLocationCoordinate2DMake(22.535561, 114.124223)
-#define HLBZ   CLLocationCoordinate2DMake(22.567428, 114.110985)
+
 
 @interface DYRouteViewController () <MAMapViewDelegate,AMapSearchDelegate>
 

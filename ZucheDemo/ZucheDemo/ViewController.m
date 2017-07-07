@@ -13,6 +13,7 @@
 #import "DYGeoViewController.h"
 #import "DYInvertGeoViewController.h"
 #import "DYRouteViewController.h"
+#import "DYNaviViewController.h"
 
 @interface ViewController () <MAMapViewDelegate>
 
@@ -184,6 +185,14 @@
     DYRouteViewController *routeVC = [[DYRouteViewController alloc] init];
     
     [self.navigationController pushViewController:routeVC animated:YES];
+
+}
+
+- (IBAction)naviViewController:(id)sender {
+
+    DYNaviViewController *naviVC = [[DYNaviViewController alloc] init];
+    
+    [self.navigationController pushViewController:naviVC animated:YES];
 
 }
 

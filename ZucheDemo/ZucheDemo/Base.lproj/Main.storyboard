@@ -77,6 +77,14 @@
                                     <action selector="routeViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGj-94-Nfa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFF-is-OGQ">
+                                <rect key="frame" x="51" y="358" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Navi"/>
+                                <connections>
+                                    <action selector="naviViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5H-c1-XQP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
