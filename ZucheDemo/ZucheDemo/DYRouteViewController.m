@@ -44,16 +44,6 @@
     
     [self initMapView];
     
-    self.startCoordinate = WZKGDA;
-    self.destinationCoordinate = SZBZ;
-    
-    self.search = [[AMapSearchAPI alloc] init];
-    self.search.delegate = self;
-    
-    [self addDefaultAnnotations];
-    
-    [self searchRoute];
-    
 }
 
 - (void)initMapView {
@@ -252,6 +242,31 @@
     }
     
     return nil;
+}
+
+- (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation {
+
+    //NSLog(@"%s", __FUNCTION__);
+    
+    NSLog(@"{%f,%f}",mapView.userLocation.coordinate.latitude,mapView.userLocation.coordinate.longitude);
+
+}
+
+- (void)mapViewDidFinishLoadingMap:(MAMapView *)mapView {
+    
+    NSLog(@"%s", __FUNCTION__);
+    
+    self.startCoordinate = self.mapView.userLocation.coordinate;
+    self.destinationCoordinate = SZBZ;
+    
+    self.search = [[AMapSearchAPI alloc] init];
+    self.search.delegate = self;
+    
+    [self addDefaultAnnotations];
+    
+    [self searchRoute];
+    
+    //[CLLocationManager locationServicesEnabled] && [CLLocationManager authorizationStatus]
 }
 
 @end
