@@ -37,6 +37,9 @@
 		A956BC6EB63EC05B8E89B165 /* libPods-ZucheDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CEEFF25675C20D103C0021C /* libPods-ZucheDemo.a */; };
 		E420C90A1F0E112D00D146B9 /* DYRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E420C9091F0E112D00D146B9 /* DYRouteViewController.m */; };
 		E420C90E1F0F691B00D146B9 /* DYNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E420C90D1F0F691B00D146B9 /* DYNaviViewController.m */; };
+		E420C9111F0F8CA800D146B9 /* SpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E420C9101F0F8CA800D146B9 /* SpeechSynthesizer.m */; };
+		E4542B8B1F131486001F98C2 /* DYMoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4542B8A1F131486001F98C2 /* DYMoreView.xib */; };
+		E4542B8E1F1316F3001F98C2 /* DYMoreMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4542B8D1F1316F3001F98C2 /* DYMoreMenuView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,11 @@
 		E420C9091F0E112D00D146B9 /* DYRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYRouteViewController.m; sourceTree = "<group>"; };
 		E420C90C1F0F691B00D146B9 /* DYNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYNaviViewController.h; sourceTree = "<group>"; };
 		E420C90D1F0F691B00D146B9 /* DYNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYNaviViewController.m; sourceTree = "<group>"; };
+		E420C90F1F0F8CA800D146B9 /* SpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechSynthesizer.h; sourceTree = "<group>"; };
+		E420C9101F0F8CA800D146B9 /* SpeechSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechSynthesizer.m; sourceTree = "<group>"; };
+		E4542B8A1F131486001F98C2 /* DYMoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYMoreView.xib; sourceTree = "<group>"; };
+		E4542B8C1F1316F3001F98C2 /* DYMoreMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMoreMenuView.h; sourceTree = "<group>"; };
+		E4542B8D1F1316F3001F98C2 /* DYMoreMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMoreMenuView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,8 +359,13 @@
 		E420C90B1F0F68D500D146B9 /* Navi */ = {
 			isa = PBXGroup;
 			children = (
+				E420C90F1F0F8CA800D146B9 /* SpeechSynthesizer.h */,
+				E420C9101F0F8CA800D146B9 /* SpeechSynthesizer.m */,
 				E420C90C1F0F691B00D146B9 /* DYNaviViewController.h */,
 				E420C90D1F0F691B00D146B9 /* DYNaviViewController.m */,
+				E4542B8A1F131486001F98C2 /* DYMoreView.xib */,
+				E4542B8C1F1316F3001F98C2 /* DYMoreMenuView.h */,
+				E4542B8D1F1316F3001F98C2 /* DYMoreMenuView.m */,
 			);
 			name = Navi;
 			sourceTree = "<group>";
@@ -476,6 +489,7 @@
 			files = (
 				04F816341F09C9D700D43A7C /* LaunchScreen.storyboard in Resources */,
 				04F816311F09C9D700D43A7C /* Assets.xcassets in Resources */,
+				E4542B8B1F131486001F98C2 /* DYMoreView.xib in Resources */,
 				04F8162F1F09C9D700D43A7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,7 +564,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				049193681F0B6D1D00DCD7F2 /* UIView+Toast.m in Sources */,
+				E420C9111F0F8CA800D146B9 /* SpeechSynthesizer.m in Sources */,
 				04F8162C1F09C9D700D43A7C /* ViewController.m in Sources */,
+				E4542B8E1F1316F3001F98C2 /* DYMoreMenuView.m in Sources */,
 				04F816291F09C9D700D43A7C /* AppDelegate.m in Sources */,
 				049193511F0B31BC00DCD7F2 /* DYPOISearchViewController.m in Sources */,
 				04F816261F09C9D700D43A7C /* main.m in Sources */,
