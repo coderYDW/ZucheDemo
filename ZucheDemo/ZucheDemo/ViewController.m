@@ -14,6 +14,7 @@
 #import "DYInvertGeoViewController.h"
 #import "DYRouteViewController.h"
 #import "DYNaviViewController.h"
+#import "DYWebViewController.h"
 
 @interface ViewController () <MAMapViewDelegate>
 
@@ -193,6 +194,14 @@
     DYNaviViewController *naviVC = [[DYNaviViewController alloc] init];
     
     [self.navigationController pushViewController:naviVC animated:YES];
+
+}
+
+- (IBAction)webViewController:(id)sender {
+
+    DYWebViewController *webVC = [[DYWebViewController alloc] init];
+    
+    [self.navigationController pushViewController:webVC animated:YES];
 
 }
 

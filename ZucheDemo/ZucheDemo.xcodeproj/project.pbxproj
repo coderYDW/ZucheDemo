@@ -40,6 +40,10 @@
 		E420C9111F0F8CA800D146B9 /* SpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E420C9101F0F8CA800D146B9 /* SpeechSynthesizer.m */; };
 		E4542B8B1F131486001F98C2 /* DYMoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4542B8A1F131486001F98C2 /* DYMoreView.xib */; };
 		E4542B8E1F1316F3001F98C2 /* DYMoreMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4542B8D1F1316F3001F98C2 /* DYMoreMenuView.m */; };
+		E4542B901F15AC94001F98C2 /* jsTest.html in Resources */ = {isa = PBXBuildFile; fileRef = E4542B8F1F15AC94001F98C2 /* jsTest.html */; };
+		E4542B941F15AD14001F98C2 /* DYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4542B931F15AD14001F98C2 /* DYWebViewController.m */; };
+		E4542B971F15B2A5001F98C2 /* DYJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E4542B961F15B2A5001F98C2 /* DYJSObject.m */; };
+		E4542B9A1F1613E1001F98C2 /* NSObject+JSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E4542B991F1613E1001F98C2 /* NSObject+JSContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +134,13 @@
 		E4542B8A1F131486001F98C2 /* DYMoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYMoreView.xib; sourceTree = "<group>"; };
 		E4542B8C1F1316F3001F98C2 /* DYMoreMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMoreMenuView.h; sourceTree = "<group>"; };
 		E4542B8D1F1316F3001F98C2 /* DYMoreMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMoreMenuView.m; sourceTree = "<group>"; };
+		E4542B8F1F15AC94001F98C2 /* jsTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jsTest.html; sourceTree = "<group>"; };
+		E4542B921F15AD14001F98C2 /* DYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYWebViewController.h; sourceTree = "<group>"; };
+		E4542B931F15AD14001F98C2 /* DYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYWebViewController.m; sourceTree = "<group>"; };
+		E4542B951F15B2A5001F98C2 /* DYJSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYJSObject.h; sourceTree = "<group>"; };
+		E4542B961F15B2A5001F98C2 /* DYJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYJSObject.m; sourceTree = "<group>"; };
+		E4542B981F1613E1001F98C2 /* NSObject+JSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSContext.h"; sourceTree = "<group>"; };
+		E4542B991F1613E1001F98C2 /* NSObject+JSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSContext.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +292,7 @@
 		04F816231F09C9D700D43A7C /* ZucheDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E4542B911F15ACA3001F98C2 /* WebJS */,
 				04F816271F09C9D700D43A7C /* AppDelegate.h */,
 				04F816281F09C9D700D43A7C /* AppDelegate.m */,
 				04F8162A1F09C9D700D43A7C /* ViewController.h */,
@@ -306,6 +318,7 @@
 		04F816241F09C9D700D43A7C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4542B8F1F15AC94001F98C2 /* jsTest.html */,
 				04F816251F09C9D700D43A7C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -368,6 +381,19 @@
 				E4542B8D1F1316F3001F98C2 /* DYMoreMenuView.m */,
 			);
 			name = Navi;
+			sourceTree = "<group>";
+		};
+		E4542B911F15ACA3001F98C2 /* WebJS */ = {
+			isa = PBXGroup;
+			children = (
+				E4542B921F15AD14001F98C2 /* DYWebViewController.h */,
+				E4542B931F15AD14001F98C2 /* DYWebViewController.m */,
+				E4542B951F15B2A5001F98C2 /* DYJSObject.h */,
+				E4542B961F15B2A5001F98C2 /* DYJSObject.m */,
+				E4542B981F1613E1001F98C2 /* NSObject+JSContext.h */,
+				E4542B991F1613E1001F98C2 /* NSObject+JSContext.m */,
+			);
+			name = WebJS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F816341F09C9D700D43A7C /* LaunchScreen.storyboard in Resources */,
+				E4542B901F15AC94001F98C2 /* jsTest.html in Resources */,
 				04F816311F09C9D700D43A7C /* Assets.xcassets in Resources */,
 				E4542B8B1F131486001F98C2 /* DYMoreView.xib in Resources */,
 				04F8162F1F09C9D700D43A7C /* Main.storyboard in Resources */,
@@ -573,15 +600,18 @@
 				049193671F0B6D1D00DCD7F2 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				0491938A1F0E283B00DCD7F2 /* MANaviAnnotation.m in Sources */,
 				049193661F0B6D1D00DCD7F2 /* NSArray+PureLayout.m in Sources */,
+				E4542B941F15AD14001F98C2 /* DYWebViewController.m in Sources */,
 				049193791F0C982900DCD7F2 /* DYGeoViewController.m in Sources */,
 				0491938B1F0E283B00DCD7F2 /* MANaviPolyline.m in Sources */,
 				049193651F0B6D1D00DCD7F2 /* ALView+PureLayout.m in Sources */,
 				04BE6FB81F09EED1006F5ADA /* DYLocationManager.m in Sources */,
 				0491936B1F0B79D700DCD7F2 /* MBProgressHUD.m in Sources */,
+				E4542B971F15B2A5001F98C2 /* DYJSObject.m in Sources */,
 				049193711F0C8E9D00DCD7F2 /* DYTipAnnotation.m in Sources */,
 				0491937C1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m in Sources */,
 				04BE6FB51F09E481006F5ADA /* DYFenceViewController.m in Sources */,
 				E420C90A1F0E112D00D146B9 /* DYRouteViewController.m in Sources */,
+				E4542B9A1F1613E1001F98C2 /* NSObject+JSContext.m in Sources */,
 				0491938C1F0E283B00DCD7F2 /* MANaviRoute.m in Sources */,
 				0491936E1F0C781200DCD7F2 /* DYTipViewController.m in Sources */,
 				E420C90E1F0F691B00D146B9 /* DYNaviViewController.m in Sources */,

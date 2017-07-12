@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>javascript</title>
+            </head>
+    <body>
+        
+        <!--为什么使用ttf.调用，下面会讲到-->
+        <button type = "button" onclick="ttf.nslog('快递费就萨拉')">点击我然后看xcode的log</button>
+        <button type = "button" onclick = "locationFunction('jack')" > JS调OC </button>
+        <button type = "button" onclick = "locationFunction2()" > JS调OC2 </button>
+        <button type = "button" onclick = "locationFunction3()" > JS调OC3 </button>
+        <button type = "button" onclick = "change.callChangeColor()" > 点击改变颜色</button>
+        <button type = "button" onclick = "change.print('hhhhh')" > 点击打印 </button>
+        
+        
+        <script type = "text/javascript">
+            
+            function locationFunction(name)
+            {
+                //调用OC的方法,没有参数
+                jstoocNoPrams();
+                
+                alert(name);
+                
+            }
+        
+        function locationFunction2()
+        {
+            //调用OC的第二个方法
+            jstoocHavePrams('参数1','参数2','参数3');
+        }
+        
+        function locationFunction3() {
+        
+            jsToOCAndOCToJS('john','rose',23);
+        
+        }
+        
+        </script>
+        
+        
+    </body>
+</html>
