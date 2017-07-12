@@ -126,7 +126,7 @@
 - (void)driveViewCloseButtonClicked:(AMapNaviDriveView *)driveView {
 
     [self.driveManager stopNavi];
-    
+    [self.driveManager removeDataRepresentative:self.driveView];
     if (SPEECH) {
         [[SpeechSynthesizer sharedSpeechSynthesizer] stopSpeak];
     }
@@ -180,6 +180,16 @@
 - (void)moreView:(DYMoreMenuView *)moreView trackingModeSelected:(UISegmentedControl *)trackingMode {
 
     self.driveView.trackingMode = trackingMode.selectedSegmentIndex;
+    
+}
+
+- (void)dealloc {
+
+    [self.driveManager stopNavi];
+    [self.driveManager removeDataRepresentative:self.driveView];
+    if (SPEECH) {
+        [[SpeechSynthesizer sharedSpeechSynthesizer] stopSpeak];
+    }
     
 }
 
