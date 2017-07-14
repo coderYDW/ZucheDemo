@@ -15,6 +15,7 @@
 #import "DYRouteViewController.h"
 #import "DYNaviViewController.h"
 #import "DYWebViewController.h"
+#import "DYNotificationViewController.h"
 
 @interface ViewController () <MAMapViewDelegate>
 
@@ -204,6 +205,15 @@
     [self.navigationController pushViewController:webVC animated:YES];
 
 }
+
+- (IBAction)userNotification:(id)sender {
+
+    DYNotificationViewController *notificationVC = [DYNotificationViewController new];
+    
+    [self.navigationController pushViewController:notificationVC animated:YES];
+    
+}
+
 
 - (void)dealloc {
 

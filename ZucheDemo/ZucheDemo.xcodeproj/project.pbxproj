@@ -44,6 +44,7 @@
 		E4542B941F15AD14001F98C2 /* DYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4542B931F15AD14001F98C2 /* DYWebViewController.m */; };
 		E4542B971F15B2A5001F98C2 /* DYJSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E4542B961F15B2A5001F98C2 /* DYJSObject.m */; };
 		E4542B9A1F1613E1001F98C2 /* NSObject+JSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = E4542B991F1613E1001F98C2 /* NSObject+JSContext.m */; };
+		E467E1591F17011C00D3A310 /* DYNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E467E1581F17011C00D3A310 /* DYNotificationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,9 @@
 		E4542B961F15B2A5001F98C2 /* DYJSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYJSObject.m; sourceTree = "<group>"; };
 		E4542B981F1613E1001F98C2 /* NSObject+JSContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSContext.h"; sourceTree = "<group>"; };
 		E4542B991F1613E1001F98C2 /* NSObject+JSContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSContext.m"; sourceTree = "<group>"; };
+		E467E1571F17011C00D3A310 /* DYNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYNotificationViewController.h; sourceTree = "<group>"; };
+		E467E1581F17011C00D3A310 /* DYNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYNotificationViewController.m; sourceTree = "<group>"; };
+		E467E15A1F17543D00D3A310 /* ZucheDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZucheDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,7 +296,7 @@
 		04F816231F09C9D700D43A7C /* ZucheDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E4542B911F15ACA3001F98C2 /* WebJS */,
+				E467E15A1F17543D00D3A310 /* ZucheDemo.entitlements */,
 				04F816271F09C9D700D43A7C /* AppDelegate.h */,
 				04F816281F09C9D700D43A7C /* AppDelegate.m */,
 				04F8162A1F09C9D700D43A7C /* ViewController.h */,
@@ -303,6 +307,8 @@
 				04F816351F09C9D700D43A7C /* Info.plist */,
 				04F816241F09C9D700D43A7C /* Supporting Files */,
 				045DDA851F09CED900F62FB6 /* PrefixHeader.pch */,
+				E467E1561F17008900D3A310 /* Notification */,
+				E4542B911F15ACA3001F98C2 /* WebJS */,
 				E420C90B1F0F68D500D146B9 /* Navi */,
 				E420C9071F0E110900D146B9 /* Route */,
 				049193761F0C980600DCD7F2 /* Geo */,
@@ -396,6 +402,15 @@
 			name = WebJS;
 			sourceTree = "<group>";
 		};
+		E467E1561F17008900D3A310 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				E467E1571F17011C00D3A310 /* DYNotificationViewController.h */,
+				E467E1581F17011C00D3A310 /* DYNotificationViewController.m */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -470,6 +485,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -602,6 +620,7 @@
 				049193661F0B6D1D00DCD7F2 /* NSArray+PureLayout.m in Sources */,
 				E4542B941F15AD14001F98C2 /* DYWebViewController.m in Sources */,
 				049193791F0C982900DCD7F2 /* DYGeoViewController.m in Sources */,
+				E467E1591F17011C00D3A310 /* DYNotificationViewController.m in Sources */,
 				0491938B1F0E283B00DCD7F2 /* MANaviPolyline.m in Sources */,
 				049193651F0B6D1D00DCD7F2 /* ALView+PureLayout.m in Sources */,
 				04BE6FB81F09EED1006F5ADA /* DYLocationManager.m in Sources */,
@@ -768,6 +787,7 @@
 			baseConfigurationReference = 3FC52D66966C8E5B6E9DB231 /* Pods-ZucheDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZucheDemo/ZucheDemo.entitlements;
 				DEVELOPMENT_TEAM = VYH2KESH9R;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZucheDemo/PrefixHeader.pch";
@@ -783,6 +803,7 @@
 			baseConfigurationReference = B073A2567E70681EC1F81685 /* Pods-ZucheDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZucheDemo/ZucheDemo.entitlements;
 				DEVELOPMENT_TEAM = VYH2KESH9R;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZucheDemo/PrefixHeader.pch";

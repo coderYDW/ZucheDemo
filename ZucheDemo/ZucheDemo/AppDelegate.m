@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
 
-@interface AppDelegate ()
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @end
 
@@ -19,7 +20,45 @@
     
     [AMapServices sharedServices].apiKey = @"1690733de86b04fa799cd81ba8cf8e29";
     
+    //[self registerNotificationWithApplication:application];
+    
     return YES;
+}
+
+- (void)registerNotificationWithApplication:(UIApplication *)application {
+
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 10.0) {
+        
+        //注册本地通知
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (!error) {
+                NSLog(@"request authorization succeeded!");
+            }
+        }];
+        
+        [center getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
+            
+            NSLog(@"settings : %@",settings);
+            
+        }];
+        
+    }
+    else if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
+        //iOS 8 - iOS 10系统
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+        [application registerUserNotificationSettings:settings];
+        
+    }
+    else {
+        //iOS 8.0系统以下
+        [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+    }
+    
+    [application registerForRemoteNotifications];
+    
+    
 }
 
 
@@ -46,7 +85,7 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
 
 

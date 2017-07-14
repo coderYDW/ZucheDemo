@@ -93,6 +93,14 @@
                                     <action selector="webViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fo-Dr-HO6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CI-iH-IMv" userLabel="Notification">
+                                <rect key="frame" x="264" y="126" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Notification"/>
+                                <connections>
+                                    <action selector="userNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UWC-Jd-AzW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
