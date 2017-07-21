@@ -16,6 +16,7 @@
 #import "DYNaviViewController.h"
 #import "DYWebViewController.h"
 #import "DYNotificationViewController.h"
+#import "DYFileViewController.h"
 
 @interface ViewController () <MAMapViewDelegate>
 
@@ -211,6 +212,14 @@
     DYNotificationViewController *notificationVC = [DYNotificationViewController new];
     
     [self.navigationController pushViewController:notificationVC animated:YES];
+    
+}
+
+- (IBAction)fileViewController:(id)sender {
+
+    DYFileViewController *fileVC = [[DYFileViewController alloc] init];
+    
+    [self.navigationController pushViewController:fileVC animated:YES];
     
 }
 

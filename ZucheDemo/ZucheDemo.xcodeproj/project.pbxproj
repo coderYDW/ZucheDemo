@@ -24,6 +24,7 @@
 		0491938A1F0E283B00DCD7F2 /* MANaviAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193841F0E283B00DCD7F2 /* MANaviAnnotation.m */; };
 		0491938B1F0E283B00DCD7F2 /* MANaviPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193861F0E283B00DCD7F2 /* MANaviPolyline.m */; };
 		0491938C1F0E283B00DCD7F2 /* MANaviRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 049193881F0E283B00DCD7F2 /* MANaviRoute.m */; };
+		049193901F1D9BFF00DCD7F2 /* DYFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0491938F1F1D9BFF00DCD7F2 /* DYFileViewController.m */; };
 		04BE6FB51F09E481006F5ADA /* DYFenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE6FB41F09E481006F5ADA /* DYFenceViewController.m */; };
 		04BE6FB81F09EED1006F5ADA /* DYLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BE6FB71F09EED1006F5ADA /* DYLocationManager.m */; };
 		04F816261F09C9D700D43A7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F816251F09C9D700D43A7C /* main.m */; };
@@ -103,6 +104,8 @@
 		049193861F0E283B00DCD7F2 /* MANaviPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviPolyline.m; sourceTree = "<group>"; };
 		049193871F0E283B00DCD7F2 /* MANaviRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANaviRoute.h; sourceTree = "<group>"; };
 		049193881F0E283B00DCD7F2 /* MANaviRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANaviRoute.m; sourceTree = "<group>"; };
+		0491938E1F1D9BFF00DCD7F2 /* DYFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFileViewController.h; sourceTree = "<group>"; };
+		0491938F1F1D9BFF00DCD7F2 /* DYFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFileViewController.m; sourceTree = "<group>"; };
 		04BE6FB31F09E481006F5ADA /* DYFenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFenceViewController.h; sourceTree = "<group>"; };
 		04BE6FB41F09E481006F5ADA /* DYFenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFenceViewController.m; sourceTree = "<group>"; };
 		04BE6FB61F09EED1006F5ADA /* DYLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYLocationManager.h; sourceTree = "<group>"; };
@@ -271,6 +274,15 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		0491938D1F1D9BE100DCD7F2 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				0491938E1F1D9BFF00DCD7F2 /* DYFileViewController.h */,
+				0491938F1F1D9BFF00DCD7F2 /* DYFileViewController.m */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
 		04F816181F09C9D600D43A7C = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +319,7 @@
 				04F816351F09C9D700D43A7C /* Info.plist */,
 				04F816241F09C9D700D43A7C /* Supporting Files */,
 				045DDA851F09CED900F62FB6 /* PrefixHeader.pch */,
+				0491938D1F1D9BE100DCD7F2 /* File */,
 				E467E1561F17008900D3A310 /* Notification */,
 				E4542B911F15ACA3001F98C2 /* WebJS */,
 				E420C90B1F0F68D500D146B9 /* Navi */,
@@ -627,6 +640,7 @@
 				0491936B1F0B79D700DCD7F2 /* MBProgressHUD.m in Sources */,
 				E4542B971F15B2A5001F98C2 /* DYJSObject.m in Sources */,
 				049193711F0C8E9D00DCD7F2 /* DYTipAnnotation.m in Sources */,
+				049193901F1D9BFF00DCD7F2 /* DYFileViewController.m in Sources */,
 				0491937C1F0CCE0C00DCD7F2 /* DYInvertGeoViewController.m in Sources */,
 				04BE6FB51F09E481006F5ADA /* DYFenceViewController.m in Sources */,
 				E420C90A1F0E112D00D146B9 /* DYRouteViewController.m in Sources */,
