@@ -23,7 +23,7 @@
 @property (strong,nonatomic) AMapLocationManager *locationManager;
 @property (strong,nonatomic) MAMapView *mapView;
 
-
+@property (nonatomic, strong) UIButton *breakdownView;
 
 @end
 
@@ -32,21 +32,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initMap];
+//    [self initMap];
+//
+//    [[DYLocationManager sharedManager] startSerialLocation];
+//
+//    __weak typeof(self) weakSelf = self;
+//
+//    [DYLocationManager sharedManager].updateHandler = ^(CLLocation *location) {
+//
+//        if (location) {
+//
+//            [weakSelf.mapView setCenterCoordinate:location.coordinate animated:YES];
+//        }
+//
+//    };
     
-    [[DYLocationManager sharedManager] startSerialLocation];
+    [self.view addSubview:self.breakdownView];
+    [self.breakdownView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self).offset(-15);
+        make.centerY.equalTo(self.view);
+    }];
     
-    __weak typeof(self) weakSelf = self;
-    
-    [DYLocationManager sharedManager].updateHandler = ^(CLLocation *location) {
-        
-        if (location) {
-            
-            [weakSelf.mapView setCenterCoordinate:location.coordinate animated:YES];
-        }
-        
-    };
-    
+}
+
+- (UIButton *)breakdownView {
+    if (_breakdownView == nil) {
+        _breakdownView = [[UIButton alloc] init];
+        [_breakdownView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _breakdownView.titleLabel.font = [UIFont systemFontOfSize:15];
+        [_breakdownView setTitle:@"故障上报" forState:UIControlStateNormal];
+        [_breakdownView setImage:[UIImage imageNamed:@"ld_breakdown"] forState:UIControlStateNormal];
+        [_breakdownView addTarget:self action:@selector(breakdownAction) forControlEvents:UIControlEventTouchUpInside];
+        [_breakdownView setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 4)];
+    }
+    return _breakdownView;
 }
 
 - (void)initMap {
